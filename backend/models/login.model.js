@@ -12,7 +12,7 @@ const loginSchema=mongoose.Schema({
     versionKey:false
 })
 
-const LoginModel=mongoose.modeel("login",loginSchema)
+const LoginModel=mongoose.model("login",loginSchema)
 
 module.exports={
     LoginModel
