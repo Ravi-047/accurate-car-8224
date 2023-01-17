@@ -1,10 +1,15 @@
 const express=require("express")
+
 const { LoginModel } = require("../models/login.model")
+
 const bcrypt=require("bcrypt")
+
 const jwt=require("jsonwebtoken")
+
 require("dotenv").config()
 
 const loginRouter=express.Router()
+
 
 loginRouter.get("/",(req,res)=>{
     res.send("Hello World")
@@ -45,6 +50,7 @@ loginRouter.patch("/loginUser",async (req,res)=>{
         res.send("No such user exist")
     }
 })
+
 
 module.exports={
     loginRouter
