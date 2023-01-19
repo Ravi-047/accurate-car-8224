@@ -49,12 +49,9 @@ console.log(data)
     <hr/>
     <MenuItem fontWeight='bold'>Price Low to High</MenuItem>
     <hr/>
- 
   </MenuList>
 </Menu>
   </Flex>
- 
- 
 </Box>
 
 </Flex>
