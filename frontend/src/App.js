@@ -6,8 +6,8 @@ function App() {
   return (
     <div>
       {/* <div>Hello World</div> */}
-      {/* <Women/> */}
-      <SingleProduct/>
+      <Women/>
+      {/* <SingleProduct/> */}
     </div>
   );
 }
