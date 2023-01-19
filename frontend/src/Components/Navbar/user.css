@@ -1,0 +1,58 @@
+.nav__user__lg {
+  width: 200px;
+  height: 180px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+  background: white;
+  padding: 20px;
+}
+
+.nav_user_option_ {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 17px;
+}
+
+.nav_user_option_ a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav__user__rbutton {
+  width: 100%;
+  font-size: 18px;
+  padding: 5px 0px;
+  border-radius: 50px;
+  background: none;
+  cursor: pointer;
+}
+
+.nav__user__rbutton:hover {
+  background: black;
+  color: white;
+}
+
+.nav__user__lbutton {
+  border: 2px solid blue;
+  width: 100%;
+  font-size: 18px;
+  padding: 5px 0px;
+  border-radius: 50px;
+  background: none;
+  cursor: pointer;
+}
+
+.nav__user__lbutton:hover {
+  background: blue;
+  color: white;
+}
+
+.nav_user_option_ a > p {
+  width: fit-content;
+  border-bottom: 2px solid transparent;
+}
+
+.nav_user_option_ a > p:hover {
+  border-bottom: 2px solid blue;
+}
