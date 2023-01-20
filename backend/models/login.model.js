@@ -5,9 +5,12 @@ const loginSchema=mongoose.Schema({
     mobile:Number,
     email:String,
     name: String,
+    lastname:String,
     password:String,
     DOB : String,
-    gender:String
+    gender:String,
+    confirmpassword:String
+    
 },{
     versionKey:false
 })
