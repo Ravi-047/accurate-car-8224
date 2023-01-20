@@ -14,6 +14,10 @@ import logo from "../../Assets/AeroFashionLogo.png";
 import "./navbar.css";
 import User from "./User";
 import UserCart from "./UserCart";
+import ProductHoverwomen from "./ProductHoverwomen";
+import ProductHoverMen from "./ProductHoverMen";
+import JeansHover from "./JeansHover";
+import Clearance from "./Clearance";
 
 const Navbar = () => {
   return (
@@ -62,18 +66,41 @@ const Navbar = () => {
             <GiHamburgerMenu />
           </div>
           <div className="product__nav__all">
-            <Link>
-              <ul>Women</ul>
-            </Link>
-            <Link>
-              <ul>Men</ul>
-            </Link>
-            <Link>
-              <ul>Jeans</ul>
-            </Link>
-            <Link>
-              <ul className="nav__clearance">Clearance</ul>
-            </Link>
+            <div className="__nav__product__hover__ onHoverWomen">
+              <Link>
+                <ul className="__women__">Women</ul>
+              </Link>
+              <div className="__product__nav__hover__">
+                <ProductHoverwomen />
+              </div>
+            </div>
+
+            <div className="__nav__product__hover__ onHoverMen">
+              <Link>
+                <ul>Men</ul>
+              </Link>
+              <div className="__product__nav__hover__">
+                <ProductHoverMen />
+              </div>
+            </div>
+
+            <div className="__nav__product__hover__ onHoverJeans">
+              <Link>
+                <ul>Jeans</ul>
+              </Link>
+              <div className="__nva__jeans__hover__">
+                <JeansHover />
+              </div>
+            </div>
+
+            <div className="__nav__product__hover__ onHoverClearance">
+              <Link>
+                <ul className="nav__clearance">Clearance</ul>
+              </Link>
+              <div className="__nva__jeans__hover__ clearance____">
+                <Clearance />
+              </div>
+            </div>
           </div>
           <div>
             <Link to="/" className="nav__logo_container">

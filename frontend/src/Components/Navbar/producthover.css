@@ -1,0 +1,53 @@
+.__product__hover__section__ {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.__product__hover__women__ {
+  font-size: 16px;
+  font-weight: bold;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.__product__hover__women__ > div > a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 500;
+  height: 35px;
+  padding-left: 10px;
+}
+
+.__product__hover__women__ > div > a:hover {
+  background: lightblue;
+}
+
+.__hover__women__image__ {
+  width: 500px;
+  height: 415px;
+}
+
+.__hover__women__image__ img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.__second__hover__product__section__ {
+  display: flex;
+}
+
+.__women__color__ {
+  color: #005eb8;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.__women__color__:hover {
+  text-decoration: underline;
+}
