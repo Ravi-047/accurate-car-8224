@@ -8,6 +8,8 @@ import love_img from "../../Assets/aerofashionlovebag.png";
 import guys_img from "../../Assets/guysshort.jpg";
 import girl_sec from "../../Assets/girlsecondpost.jpg";
 import tshirt_img from "../../Assets/tshirtpost.jpg";
+import last_jeans from "../../Assets/lastjeansimage.jpg";
+import recyle from "../../Assets/recycleicon.svg";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -409,8 +411,12 @@ const HomePage = () => {
               them all your own.
             </p>
             <div>
-              <Link>Girls Jeans $ 17.87 & Up</Link>
-              <Link>Gusy Jeans $ 17.87 & Up</Link>
+              <Link>
+                Girls Jeans <strong>$ 17.87 & Up</strong>
+              </Link>
+              <Link>
+                Gusy Jeans <strong>$ 17.87 & Up</strong>
+              </Link>
             </div>
           </div>
 
@@ -460,7 +466,18 @@ const HomePage = () => {
           </div>
         </div>
 
-        <div></div>
+        <div className="__home__container__6__">
+          <img src={last_jeans} alt="jeans" />
+          <div className="__home__recycle__">
+            <div>
+              <img src={recyle} alt="recyle" />
+            </div>
+            <p>
+              At Aero, we're committed to a better, brighter future. <br />
+              do better, look better, feel better... it's in our jeans.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );

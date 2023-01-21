@@ -27,7 +27,6 @@
 /* banner  */
 .__home__main__body__ {
   width: 98%;
-  border: 1px solid red;
   margin: auto;
   padding: 10px 0px;
 }
@@ -455,13 +454,95 @@
 /* __home__container__5__  */
 
 .__home__container__5__ {
-  border: 1px solid red;
   margin-top: 20px;
   display: flex;
   align-items: center;
   justify-items: space-between;
 }
 
+.__home__container__5__ .react-multi-carousel-dot-list {
+  display: none;
+}
+
 ._container_5_middle_data_ {
-  border: 1px solid red;
+  height: 35.5vw;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+._container_5_middle_data_ > p:nth-child(1) {
+  font-size: 2.9vw;
+  font-weight: bolder;
+  color: #02afcf;
+  line-height: 1;
+}
+
+._container_5_middle_data_ > p:nth-child(2) {
+  font-size: 1.6vw;
+  line-height: 2vw;
+  color: #02afcf;
+  margin: 1vw;
+  text-align: center;
+  font-weight: 400;
+}
+
+._container_5_middle_data_ > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+
+._container_5_middle_data_ > div > a {
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 3vw;
+  letter-spacing: normal;
+  text-align: center;
+  transition: 0.2s ease-in-out all;
+  display: inline-block !important;
+  width: 20vw;
+  font-size: 1.5vw;
+  border-width: 4px;
+  border: solid 2px #02afcf;
+  border-radius: 0.3vw;
+  background-color: white;
+  color: #02afcf;
+  margin: 0.3vw;
+  padding-top: 0.2vw;
+}
+
+._container_5_middle_data_ > div > a:hover {
+  background-color: #02afcf;
+  color: white;
+}
+/* __home__container__6__ */
+
+.__home__container__6__ {
+  position: relative;
+  margin-top: 20px;
+}
+
+.__home__recycle__ {
+  position: absolute;
+  top: 160px;
+  right: 140px;
+}
+
+.__home__recycle__ > div > img {
+  width: 7vw;
+  margin: 0 auto;
+  margin-bottom: 1.5vw;
+}
+
+.__home__recycle__ > p {
+  font-weight: bold;
+  font-size: 1.8vw;
+  color: #fff;
+  line-height: normal;
+  text-align: center;
 }
