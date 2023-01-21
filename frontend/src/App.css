@@ -1,0 +1,5 @@
+._nav__position__sticky__ {
+  position: sticky;
+  top: 0;
+  z-index: 200000;
+}

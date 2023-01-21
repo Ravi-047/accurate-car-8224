@@ -1,6 +1,6 @@
 .nav__user__lg {
   width: 200px;
-  height: 180px;
+  height: 200px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 10px;
   background: white;
@@ -20,6 +20,7 @@
 }
 
 .nav__user__rbutton {
+  border: 2px solid black;
   width: 100%;
   font-size: 18px;
   padding: 5px 0px;
