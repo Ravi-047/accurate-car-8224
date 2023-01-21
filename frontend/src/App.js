@@ -6,7 +6,9 @@ import MainRoutes from './Pages/MainRoutes';
 function App() {
   return (
     <div>
-      <Navbar />
+      <div className='_nav__position__sticky__'>
+        <Navbar />
+      </div>
       <MainRoutes />
       <Footer />
     </div>

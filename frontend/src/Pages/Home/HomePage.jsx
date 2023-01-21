@@ -465,18 +465,17 @@ const HomePage = () => {
             </Carousel>
           </div>
         </div>
-
-        <div className="__home__container__6__">
-          <img src={last_jeans} alt="jeans" />
-          <div className="__home__recycle__">
-            <div>
-              <img src={recyle} alt="recyle" />
-            </div>
-            <p>
-              At Aero, we're committed to a better, brighter future. <br />
-              do better, look better, feel better... it's in our jeans.
-            </p>
+      </div>
+      <div className="__home__container__6__">
+        <img src={last_jeans} alt="jeans" />
+        <div className="__home__recycle__">
+          <div>
+            <img src={recyle} alt="recyle" />
           </div>
+          <p>
+            At Aero, we're committed to a better, brighter future. <br />
+            do better, look better, feel better... it's in our jeans.
+          </p>
         </div>
       </div>
     </div>

@@ -22,6 +22,7 @@ nav {
   padding: 0px 20px;
   align-items: center;
   justify-content: space-between;
+  background: white;
 }
 
 .main__navbar .nav_ham_option {
@@ -112,7 +113,7 @@ nav {
 }
 
 .main__navbar .nav__logo_container {
-  z-index: -1;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
