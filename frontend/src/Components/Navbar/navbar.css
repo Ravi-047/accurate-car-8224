@@ -113,7 +113,6 @@ nav {
 }
 
 .main__navbar .nav__logo_container {
-  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
