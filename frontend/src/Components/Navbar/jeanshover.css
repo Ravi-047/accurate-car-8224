@@ -1,0 +1,100 @@
+.__jeans__option__all__men__women__ {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.__jeans__shop__all__ {
+  color: #005eb8;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 50px;
+}
+
+.__jeans__shop__all__:hover {
+  text-decoration: underline;
+}
+
+.__jeans__all__option__ {
+  width: 200px;
+}
+
+.__jeans__all__option__ > p {
+  width: 100%;
+  height: 100%;
+}
+
+.__jeans__all__option__ p > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.__jeans__all__men__,
+.__jeans__all__women__ {
+  position: relative;
+  height: 45px;
+  cursor: pointer;
+  padding-left: 10px;
+  padding-top: 9px;
+}
+.__jeans__all__option__ p > a,
+.__jeans__all__women__ p > a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.__jeans__all__men__:hover {
+  background-color: #f2f2f2;
+}
+
+.__jeans__all__women__:hover {
+  background-color: #f2f2f2;
+}
+
+.__option__for__men__,
+.__option__for__women__ {
+  position: absolute;
+  top: -87px;
+  left: 200px;
+  width: 300px;
+  height: 450px;
+  padding: 10px 0px 0px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  visibility: hidden;
+  background-color: #f2f2f2;
+  font-size: 17px;
+}
+.__option__for__women__ {
+  top: -132px;
+}
+
+.__jeans__all__men__:hover .__option__for__men__ {
+  visibility: visible;
+}
+.__jeans__all__women__:hover .__option__for__women__ {
+  visibility: visible;
+}
+.__option__for__men__ > p:first-child,
+.__option__for__women__ > p:first-child {
+  color: #005eb8;
+}
+.__option__for__men__ > p:hover,
+.__option__for__women__ > p:hover {
+  text-decoration: underline;
+}
+
+.__hover__jeans__image__ {
+  width: 500px;
+  height: 415px;
+}
+
+.__hover__jeans__image__ img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}

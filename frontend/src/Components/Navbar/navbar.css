@@ -22,6 +22,7 @@ nav {
   padding: 0px 20px;
   align-items: center;
   justify-content: space-between;
+  background: white;
 }
 
 .main__navbar .nav_ham_option {
@@ -38,11 +39,61 @@ nav {
   height: 100%;
 }
 
-.product__nav__all > a {
+.product__nav__all > .__nav__product__hover__ {
   height: 100%;
   text-decoration: none;
   color: black;
+  position: relative;
 }
+.__product__nav__hover__ {
+  position: absolute;
+  background: white;
+  width: 1200px;
+  height: 450px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+  padding: 10px;
+  top: 70px;
+  left: -5px;
+  display: flex;
+  align-items: center;
+  visibility: hidden;
+}
+.product__nav__all > .onHoverWomen:hover .__product__nav__hover__ {
+  visibility: visible;
+}
+
+.product__nav__all > .onHoverMen:hover .__product__nav__hover__ {
+  visibility: visible;
+}
+
+.__nva__jeans__hover__ {
+  position: absolute;
+  background: white;
+  width: 1200px;
+  height: 450px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+  padding: 10px;
+  top: 70px;
+  left: -150px;
+  display: flex;
+  align-items: flex-start;
+  visibility: hidden;
+}
+
+.clearance____ {
+  left: -220px;
+}
+
+.product__nav__all > .onHoverJeans:hover .__nva__jeans__hover__ {
+  visibility: visible;
+}
+
+.product__nav__all > .onHoverClearance:hover .__nva__jeans__hover__ {
+  visibility: visible;
+}
+
 .product__nav__all ul {
   list-style: none;
   height: 100%;
@@ -62,7 +113,7 @@ nav {
 }
 
 .main__navbar .nav__logo_container {
-  z-index: -1;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -148,7 +199,7 @@ nav {
   left: 30px;
   background: #005eb8;
   border-radius: 50%;
-  padding: 1px 7px;
+  padding: 0px 8px;
   font-size: 15px;
   font-weight: 400;
   color: white;
@@ -158,6 +209,11 @@ nav {
   position: absolute;
   top: 70px;
   right: -5px;
+  visibility: hidden;
+}
+
+.main__navbar .nav__cart__bag:hover .__show__user__cart__ {
+  visibility: visible;
 }
 /* ------------------------------- responseive  */
 
