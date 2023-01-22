@@ -16,6 +16,7 @@ import React, { useEffect, useState } from "react";
 import { AiOutlineShopping } from "react-icons/ai";
 import { HiOutlineArrowsUpDown } from "react-icons/hi2";
 import { useNavigate } from "react-router-dom";
+import Loading from "../../Components/Loading";
 
 import FilterModel from "./FilterModel";
 
@@ -97,6 +98,11 @@ const navigate=useNavigate()
 const handleOnNextpage=(id)=>{
   navigate(`/women/${id}`)
 }
+if(data.length==0){
+  return <Loading />
+}else{
+
+
 
   return (
     <div>
@@ -227,7 +233,10 @@ const handleOnNextpage=(id)=>{
       </Grid>
       {/* </div> */}
     </div>
-  );
+
+
+);
+      }
 };
 
 export default Women;

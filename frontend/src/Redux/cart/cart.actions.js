@@ -15,7 +15,8 @@ export const getcartitems = () => async (dispatch) => {
       headers: { "Authorization": `${token}` }
     }
     );
-    dispatch({ type: GET_CART_ITEMS, payload: response.data });
+    console.log(response);
+    dispatch({ type: GET_CART_ITEMS, payload: response });
   } catch (e) {
 
   }
