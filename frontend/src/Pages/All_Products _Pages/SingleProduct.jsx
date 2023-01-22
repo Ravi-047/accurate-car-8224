@@ -7,6 +7,7 @@ import {
   Image,
   Link,
   Text,
+  useToast,
 } from "@chakra-ui/react";
 import {
   Accordion,
@@ -61,9 +62,7 @@ const datas = [
     compValue: 79.5,
   },
 ];
-const placeOrder=()=>{
-  
-}
+const placeOrder = () => {};
 
 const SingleProduct = () => {
   const [data, setData] = useState([]);
@@ -72,8 +71,16 @@ const SingleProduct = () => {
   const dispatch = useDispatch();
   const cartdata = useSelector((store) => store.cartManager.data);
   console.log(cartdata);
+  const toast=useToast();
   const handleAddtocart = () => {
     dispatch(addcartitems(cartData));
+          toast({
+            title: "Item added to bag",
+            description: "Successfuly added to cart",
+            status: "success",
+            duration: 9000,
+            isClosable: true,
+          });
   };
 
   useEffect(() => {

@@ -5,7 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { getcartitems } from "../../Redux/cart/cart.actions";
 
 const UserCart = () => {
-  const cartdata = useSelector((store) => store.cartManager.data);
+  const rdata = useSelector((store) => store.cartManager.data.data);
+  const cartdata = rdata || [];
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getcartitems());
@@ -21,7 +22,7 @@ const UserCart = () => {
         <div className="__all__cart__details__">
           <div className="__cart__total__"></div>
           <div className="__cart__shopingbag__">
-            <Link to="/shopingbag">View Shoping Bag</Link>
+            <Link to="/cart">View Shoping Bag</Link>
           </div>
           <div className="__cart__all__product__">
             {cartdata?.map((item, index) => (
