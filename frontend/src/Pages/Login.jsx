@@ -1,31 +1,63 @@
 import React from 'react'
 // import { Link } from 'react-router-dom'
-import {Flex,Link,Text,Accordion,Image,AccordionItem,AccordionIcon,AccordionButton, AccordionPanel,FormControl, FormLabel, Input, Box,FormHelperText,FormErrorMessage, Checkbox,Button, Select } from "@chakra-ui/react";
+import {Flex,useToast,Text,Accordion,Image,AccordionItem,AccordionIcon,AccordionButton, AccordionPanel,FormControl, FormLabel, Input, Box,FormHelperText,FormErrorMessage, Checkbox,Button, Select } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import { useState } from 'react';
+import { useEffect } from 'react';
+
 
 
 const Login = () => {
+  const toast = useToast();
+
+
   const [email,setEmail]=useState("")
   const [password,setPassword]=useState("")
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault()
     const payload = { email, password };
     // console.log(payload);
-    fetch("https://harlequin-deer-kilt.cyclic.app/login/loginUser", {
-      method: "POST",
-      body: JSON.stringify(payload),
-      headers: {
-        "Content-type": "application/json",
-      },
-    })
-      .then((res) => res.json())
-      .then((res) => {
-        console.log(res);
-        localStorage.setItem("token", res.token);
+
+      fetch("https://harlequin-deer-kilt.cyclic.app/login/loginUser", {
+        method: "POST",
+        body: JSON.stringify(payload),
+        headers: {
+          "Content-type": "application/json",
+        },
       })
-      .catch((err) => console.log(err));
+        .then((res) => res.json())
+        .then((res) => {
+          console.log(res);
+          localStorage.setItem("token", res.token);
+        })
+        .catch((err) => console.log(err));
+   
+ 
+
+      if(localStorage.getItem("token")){
+     setTimeout(() => {
+      toast({
+        position: 'bottom-left',
+        render: () => (
+          <Box color='white' p={3} bg='blue.500'>
+            {`welcome ${email} `}
+          </Box>
+        ),
+      })
+     },1000);
+        navigateTo("/")
+      }else{
+        toast({
+          position: 'bottom-left',
+          render: () => (
+            <Box color='white' p={3} bg='blue.500'>
+              {`please register first`}
+            </Box>
+          ),
+        })
+      }
   };
-  
+
 
   const navigateTo = useNavigate();
   const GoTo = (path) => {

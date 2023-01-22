@@ -1,20 +1,8 @@
 import React from "react";
-import {Flex,Link,Text,Accordion,Image,AccordionItem,AccordionIcon,AccordionButton, AccordionPanel,FormControl, FormLabel, Input, Box,FormHelperText,FormErrorMessage, Checkbox,Button, Select } from "@chakra-ui/react";
-import {
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalFooter,
-  ModalBody,
-  ModalCloseButton,
-  useDisclosure,
-  // Button,
-  // Box,
-  IconButton,
-  useColorMode,
-} from "@chakra-ui/react";
+import {Flex,Link,useToast,Text,Accordion,Image,AccordionItem,AccordionIcon,AccordionButton, AccordionPanel,FormControl, FormLabel, Input, Box,FormHelperText,FormErrorMessage, Checkbox,Button, Select, Toast } from "@chakra-ui/react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 
 
 const Signup = () => {
@@ -26,8 +14,12 @@ const Signup = () => {
   const [DOB,setDOB]=useState("")
   const [gender,setGender]=useState("")
   const [confirmpassword,setConfirmpassword]=useState("")
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const { toggleColorMode, colorMode } = useColorMode();
+  const toast = useToast();
+  const navigateTo = useNavigate();
+
+
+
+
 
   const handleSubmit = ()=>{
     const payload = {name,email,password,gender,mobile,DOB,confirmpassword,lastname}
@@ -40,7 +32,30 @@ const Signup = () => {
            "content-type":"application/json"
         }
     }).then(res=>res.json()).then(res=>console.log(res)).catch(err=>console.log(err))
-    alert(`registerd with name ${name}`)
+   
+if(name,email,password,gender,mobile,DOB,confirmpassword,lastname && password===confirmpassword ){
+  toast({
+
+    position: 'bottom-left',
+    render: () => (
+      <Box color='white' p={3} bg='blue.500'>
+        {`welcome ${name} you have successfully registered`}
+      </Box>
+    ),
+  })
+  navigateTo("/login");
+
+
+}else{
+  toast({
+    title: "something is missing , please add all credentials",
+    description: "",
+    status: "error",
+    duration: 4000,
+    isClosable: true,
+  });
+}
+        
 }
 
 
@@ -146,7 +161,7 @@ const Signup = () => {
         </FormControl>
         <Checkbox mt={"20px"}  defaultChecked>Please Add Me To Aeropostale's Email List. Aeropostale Does Not Share Or Sell Personal Info.</Checkbox>
         <br />
-      <Button onClick={handleSubmit} mt={"20px"} height={"50px"} fontSize={"20px"}  borderRadius={"20px"} width={"200px"} bgColor={"blue.600"}> Apply</Button>
+      <Button onClick={handleSubmit } mt={"20px"} height={"50px"} fontSize={"20px"}  borderRadius={"20px"} width={"200px"} bgColor={"blue.600"}> Apply</Button>
       </Box>
       <Box position={"fixed"} mr={"10%"} ml={"30%"}>
         <Text fontWeight={"500"} mt={"30px"}  fontSize={"30px"}>SignUp with Facebook</Text>
