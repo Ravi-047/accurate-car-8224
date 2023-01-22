@@ -5,9 +5,7 @@ const productRouter=express.Router()
 
 productRouter.get("/get",async(req,res)=>{
     let query=req.query
-    const {q} = req.query
-    const obj = {}
-    if (q) queryObject.title = { $regex: q, $options: "i" }
+    
     
     let data;
 
@@ -20,7 +18,7 @@ productRouter.get("/get",async(req,res)=>{
     }else if(query.category!==undefined){
         data=await ProductModel.find({category:query.category})
     }else{
-        data=await ProductModel.find(obj)
+        data=await ProductModel.find()
     }
     res.send(data)
 })
