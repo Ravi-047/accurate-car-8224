@@ -22,44 +22,15 @@ import FilterModel from "./FilterModel";
 
 const categories=[{
   id:1,
-  name:"Tops",
-  path:"tops"
+  name:"Men",
+  path:"mens"
 },
 {
   id:2,
-  name:"Bottoms",
-  path:"bottom"
+  name:"women",
+  path:"Womens"
 },
-{
-  id:3,
-  name:"Dresses+Rompers",
-  path:"dresses"
-},
-{
-  id:4,
-  name:"Hodies+Swets",
-  path:"hoodies"
-},
-{
-  id:5,
-  name:"Longewear",
-  path:"dresses"
-},
-{
-  id:6,
-  name:"Swimwear",
-  path:"bottoms"
-},
-{
-  id:7,
-  name:"Outerwear",
-  path:"dresses"
-},
-{
-  id:8,
-  name:"Bralettes",
-  path:"tops"
-},
+
 
 
 ] 
@@ -67,16 +38,15 @@ const categories=[{
 
 
 
-const Women = () => {
+const Clearence = () => {
   const [data, setData] = useState([]);
-  const [filter, setfilter] = useState("tops");
+  const [filter, setfilter] = useState("mens");
 const navigate=useNavigate()
   //Get Method - is used to display data
   useEffect(() => {
 
     async function fetchData(filter) {
-      // console.log(filter)
-     await fetch(`https://harlequin-deer-kilt.cyclic.app/product/get?gender=Womens&category=${filter}`)
+     await fetch(`https://harlequin-deer-kilt.cyclic.app/product/get?gender=${filter}`)
       .then((response) => response.json())
       .then((json) => {
         console.log(json);
@@ -95,7 +65,7 @@ const navigate=useNavigate()
 
 
 const handleOnNextpage=(id)=>{
-  navigate(`/women/${id}`)
+  navigate(`/clearence/${id}`)
 }
 
   return (
@@ -104,8 +74,8 @@ const handleOnNextpage=(id)=>{
                {/* //filter Part */}
   
   <Box>
-  <Flex justifyContent={"space-between"}>
-    <Text fontWeight={'bold'} fontSize='28px'>Women</Text>
+  <Flex  gap={8}>
+    <Text fontWeight={'bold'} fontSize='28px'>Clearence</Text>
 {
   categories.map((e,index)=>{
     return(
@@ -230,4 +200,4 @@ const handleOnNextpage=(id)=>{
   );
 };
 
-export default Women;
+export default Clearence;
