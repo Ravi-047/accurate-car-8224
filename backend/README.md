@@ -1,6 +1,6 @@
 //-----------------------------------
 For SIGIN/LOGIN
-PATCH
+POST
 
 https://harlequin-deer-kilt.cyclic.app/login/loginUser
 header token – Authorization

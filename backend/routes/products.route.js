@@ -5,18 +5,26 @@ const productRouter=express.Router()
 
 productRouter.get("/get",async(req,res)=>{
     let query=req.query
+    const {q} = req.query
+    const obj = {}
+    if (q) queryObject.title = { $regex: q, $options: "i" }
+    
     let data;
+
     if(query.gender!==undefined && query.category!=undefined){
         data=await ProductModel.find({$and:[{category:query.category},{gender:query.gender}]})
+
+
     }else if(query.gender!==undefined){
         data=await ProductModel.find({gender:query.gender})
     }else if(query.category!==undefined){
         data=await ProductModel.find({category:query.category})
     }else{
-        data=await ProductModel.find()
+        data=await ProductModel.find(obj)
     }
     res.send(data)
 })
+
 
 productRouter.get("/get/:id",async(req,res)=>{
     let id=req.params.id
