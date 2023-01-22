@@ -19,7 +19,18 @@ import ProductHoverMen from "./ProductHoverMen";
 import JeansHover from "./JeansHover";
 import Clearance from "./Clearance";
 
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { getcartitems } from "../../Redux/cart/cart.actions";
+
 const Navbar = () => {
+  const cartdata = useSelector((store) => store.cartManager.data);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getcartitems());
+  }, [dispatch, cartdata]);
+
   return (
     <>
       {/* topnav */}
@@ -67,10 +78,7 @@ const Navbar = () => {
           </div>
           <div className="product__nav__all">
             <div className="__nav__product__hover__ onHoverWomen">
-
-              <Link to='/women'>
-
-              
+              <Link to="/women">
                 <ul className="__women__">Women</ul>
               </Link>
               <div className="__product__nav__hover__">
@@ -79,7 +87,7 @@ const Navbar = () => {
             </div>
 
             <div className="__nav__product__hover__ onHoverMen">
-              <Link to='/men'>
+              <Link to="/men">
                 <ul>Men</ul>
               </Link>
               <div className="__product__nav__hover__">
@@ -88,7 +96,7 @@ const Navbar = () => {
             </div>
 
             <div className="__nav__product__hover__ onHoverJeans">
-              <Link to='/jeans'>
+              <Link to="/jeans">
                 <ul>Jeans</ul>
               </Link>
               <div className="__nva__jeans__hover__">
@@ -97,7 +105,7 @@ const Navbar = () => {
             </div>
 
             <div className="__nav__product__hover__ onHoverClearance">
-              <Link  to='/clearence'> 
+              <Link to="/clearence">
                 <ul className="nav__clearance">Clearance</ul>
               </Link>
               <div className="__nva__jeans__hover__ clearance____">
@@ -126,7 +134,9 @@ const Navbar = () => {
             </span>
             <span className="nav__cart__bag fixing__span">
               <HiOutlineShoppingBag className="nav__shopingbag" />
-              <span className="cart__quantity">1</span>
+              <span className="cart__quantity">
+                {localStorage.getItem("token") !== null ? cartdata.length : 0}
+              </span>
               <div className="__show__user__cart__">
                 <UserCart />
               </div>
