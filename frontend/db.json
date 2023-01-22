@@ -1,0 +1,19 @@
+{
+  "cartItems": [
+    {
+      "productId": 2,
+      "count": 4,
+      "id": 1
+    },
+    {
+      "productId": 3,
+      "count": 1,
+      "id": 2
+    },
+    {
+      "productId": 1,
+      "count": 1,
+      "id": 3
+    }
+  ]
+}
