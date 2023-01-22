@@ -1,9 +1,54 @@
 import React from "react";
 import {Flex,Link,Text,Accordion,Image,AccordionItem,AccordionIcon,AccordionButton, AccordionPanel,FormControl, FormLabel, Input, Box,FormHelperText,FormErrorMessage, Checkbox,Button, Select } from "@chakra-ui/react";
-import { NavLink } from "react-router-dom";
-import { Show, Hide } from '@chakra-ui/react'
+import {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+  useDisclosure,
+  // Button,
+  // Box,
+  IconButton,
+  useColorMode,
+} from "@chakra-ui/react";
+import { useState } from "react";
+
 
 const Signup = () => {
+  const [name,setName]=useState("")
+  const [lastname,setLastName]=useState("")
+  const [email,setEmail]=useState("")
+  const [mobile,setMobile]=useState("")
+  const [password,setPassword]=useState("")
+  const [DOB,setDOB]=useState("")
+  const [gender,setGender]=useState("")
+  const [confirmpassword,setConfirmpassword]=useState("")
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const { toggleColorMode, colorMode } = useColorMode();
+
+  const handleSubmit = ()=>{
+    const payload = {name,email,password,gender,mobile,DOB,confirmpassword,lastname}
+
+    console.log(payload);
+    fetch("https://harlequin-deer-kilt.cyclic.app/login/adddetails",{
+        method:"POST",
+        body:JSON.stringify(payload),
+        headers:{
+           "content-type":"application/json"
+        }
+    }).then(res=>res.json()).then(res=>console.log(res)).catch(err=>console.log(err))
+    alert(`registerd with name ${name}`)
+}
+
+
+
+
+
+
+
   return (
     <>
     <Flex>
@@ -63,43 +108,45 @@ const Signup = () => {
   <Box>
         <FormControl mt={"20px"}>
           <FormLabel  mt={"20px"} fontSize={"30px"}>First Name *</FormLabel>
-          <Input isRequired height="60px" width="400px" fontSize="20px" type="text" />
+          <Input  onChange={(e)=>setName(e.target.value)} value={name} isRequired height="60px" width="400px" fontSize="20px" type="text" />
      
 
           <FormLabel mt={"20px"} fontSize={"30px"}>Last Name *</FormLabel>
-          <Input height="60px" width="400px" fontSize="20px" type="text" />
+          <Input onChange={(e)=>setLastName(e.target.value)}  value={lastname} height="60px" width="400px" fontSize="20px" type="text" />
 
           <FormLabel mt={"20px"} fontSize={"30px"}>Phone *</FormLabel>
-          <Input height="60px" width="400px" fontSize="20px" type="text" placeholder="Enter Phone Number" />
+          <Input onChange={(e)=>setMobile(e.target.value)}  value={mobile} height="60px" width="400px" fontSize="20px" type="text" placeholder="Enter Phone Number" />
 
           <FormLabel mt={"20px"} fontSize={"30px"} >
             Select Gender *
             <br />
-          <select   style={{height:"60px",width:"400px",fontSize:"20px" , border:"1px solid grey"}} placeholder="Gender">
-            <option  >Male</option>
-            <option>Female</option>
+          <select  onChange={(e)=>setGender(e.target.value)}   style={{height:"60px",width:"400px",fontSize:"20px" , border:"1px solid grey"}} placeholder="Gender">
+          <option value="" >select gender</option>
+            
+            <option value="male" >Male</option>
+            <option value="female">Female</option>
           </select>
           </FormLabel>
 
           <FormLabel  mt={"20px"} fontSize={"30px"}>DOB *</FormLabel>
-          <Input height="60px" width="400px" fontSize="20px" type="date" />
+          <Input onChange={(e)=>setDOB(e.target.value)}  value={DOB} height="60px" width="400px" fontSize="20px" type="date" />
           
           <FormLabel mt={"20px"} fontSize={"30px"}> E-mail *</FormLabel>
-          <Input height="60px" width="400px" fontSize="20px" type="email" />
+          <Input onChange={(e)=>setEmail(e.target.value)}  value={email} height="60px" width="400px" fontSize="20px" type="email" />
           <FormHelperText>We'll never share your email.</FormHelperText>
           <FormErrorMessage>Email is required.</FormErrorMessage>
 
 
           <FormLabel mt={"20px"} fontSize={"30px"}>Password *</FormLabel>
-          <Input height="60px" width="400px" fontSize="20px" type="password" Show />
+          <Input onChange={(e)=>setPassword(e.target.value)}  value={password} height="60px" width="400px" fontSize="20px" type="password" Show />
 
           <FormLabel mt={"20px"} fontSize={"30px"}>Confirm Password *</FormLabel>
-          <Input height="60px" width="400px" fontSize="20px" type="password" />
+          <Input onChange={(e)=>setConfirmpassword(e.target.value)}  value={confirmpassword}  height="60px" width="400px" fontSize="20px" type="password" />
           
         </FormControl>
         <Checkbox mt={"20px"}  defaultChecked>Please Add Me To Aeropostale's Email List. Aeropostale Does Not Share Or Sell Personal Info.</Checkbox>
         <br />
-      <Button mt={"20px"} height={"50px"} fontSize={"20px"}  borderRadius={"20px"} width={"200px"} bgColor={"blue.600"}> Apply</Button>
+      <Button onClick={handleSubmit} mt={"20px"} height={"50px"} fontSize={"20px"}  borderRadius={"20px"} width={"200px"} bgColor={"blue.600"}> Apply</Button>
       </Box>
       <Box position={"fixed"} mr={"10%"} ml={"30%"}>
         <Text fontWeight={"500"} mt={"30px"}  fontSize={"30px"}>SignUp with Facebook</Text>
