@@ -45,7 +45,7 @@ https://harlequin-deer-kilt.cyclic.app/product/post
 //-----------------------------------
 FOR DELETE 
 
-https://harlequin-deer-kilt.cyclic.app/delete/:id
+https://harlequin-deer-kilt.cyclic.app/cart/delete/:id
 
 
 //-----------------------------------
