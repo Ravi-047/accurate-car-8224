@@ -22,7 +22,7 @@ cartRouter.patch("/modify/:id",async(req,res)=>{
     let data=req.body
     let userData=await CartModel.find({_id:id})
     if(userData[0].userID=data.userID){
-        await UserModel.findByIdAndUpdate(id,data)
+        await CartModel.findByIdAndUpdate(id,data)
         res.send("Updated Succesfully")
     }else{
         res.send("You cannot modify the data.")

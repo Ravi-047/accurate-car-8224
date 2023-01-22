@@ -246,35 +246,35 @@ const HomePage = () => {
             >
               <div>
                 <img
-                  src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dwd31e0e5c/images/jeans-guide/031320-girls-shorts-guide/CURVY.jpg"
+                  src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dwc908e3b8/images/shorts-guide/2020/guys-shorts-guide/LONG%20CARGO.jpg"
                   alt="product"
                 />
                 <p>Curvy New!</p>
               </div>
               <div>
                 <img
-                  src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dw1d7d9d9a/images/jeans-guide/031320-girls-shorts-guide/VINTAGE%20HIGH%20RISE.jpg"
+                  src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dw54f0dee5/images/shorts-guide/2020/guys-shorts-guide/SLIM%20CUT-OFF.jpg"
                   alt="product"
                 />
                 <p>Vintage High Rise</p>
               </div>
               <div>
                 <img
-                  src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dwe4c9367c/images/jeans-guide/031320-girls-shorts-guide/MOM.jpg"
+                  src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dw8287ef13/images/shorts-guide/2020/guys-shorts-guide/BEACH%20CHINO.jpg"
                   alt="product"
                 />
                 <p>Curvy New!</p>
               </div>
               <div>
                 <img
-                  src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dw263e01e0/images/jeans-guide/031320-girls-shorts-guide/BERMUDA.jpg"
+                  src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dw9619c8f9/images/shorts-guide/2020/guys-shorts-guide/SLIM%20CUFFED.jpg"
                   alt="product"
                 />
                 <p>Curvy New!</p>
               </div>
               <div>
                 <img
-                  src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dw95172bda/images/jeans-guide/031320-girls-shorts-guide/SUPER%20HIGH%20RISE.jpg"
+                  src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dw323348c8/images/shorts-guide/2020/guys-shorts-guide/CLASSIC%20CHINO.jpg"
                   alt="product"
                 />
                 <p>Curvy New!</p>
@@ -357,35 +357,35 @@ const HomePage = () => {
             >
               <div>
                 <img
-                  src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dwd31e0e5c/images/jeans-guide/031320-girls-shorts-guide/CURVY.jpg"
+                  src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dw40b59aa7/images/homepage/2020/011520/jeans/SPR20_FIT_GUIDE_DENIM_GIRLS_CHEEKY-min.jpg"
                   alt="product"
                 />
                 <p>Curvy New!</p>
               </div>
               <div>
                 <img
-                  src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dw1d7d9d9a/images/jeans-guide/031320-girls-shorts-guide/VINTAGE%20HIGH%20RISE.jpg"
+                  src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dwfafadc45/images/homepage/2020/011520/jeans/SPR20_FIT_GUIDE_DENIM_GUYS_ATHLETICSKINNY-min.jpg"
                   alt="product"
                 />
                 <p>Vintage High Rise</p>
               </div>
               <div>
                 <img
-                  src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dwe4c9367c/images/jeans-guide/031320-girls-shorts-guide/MOM.jpg"
+                  src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dw678aa8b7/images/homepage/2020/011520/jeans/SPR20_FIT_GUIDE_DENIM_GIRLS_CURVY-min.jpg"
                   alt="product"
                 />
                 <p>Curvy New!</p>
               </div>
               <div>
                 <img
-                  src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dw263e01e0/images/jeans-guide/031320-girls-shorts-guide/BERMUDA.jpg"
+                  src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dwd384b11b/images/homepage/2020/011520/jeans/SPR20_FIT_GUIDE_DENIM_GUYS_SLIM-min.jpg"
                   alt="product"
                 />
                 <p>Curvy New!</p>
               </div>
               <div>
                 <img
-                  src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dw95172bda/images/jeans-guide/031320-girls-shorts-guide/SUPER%20HIGH%20RISE.jpg"
+                  src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dw0bcce79d/images/homepage/2020/011520/jeans/SPR20_FIT_GUIDE_DENIM_GIRLS_SKINNY_JEGGING-min.jpg"
                   alt="product"
                 />
                 <p>Curvy New!</p>
@@ -429,35 +429,35 @@ const HomePage = () => {
             >
               <div>
                 <img
-                  src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dwd31e0e5c/images/jeans-guide/031320-girls-shorts-guide/CURVY.jpg"
+                  src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dw9f81cac3/images/homepage/2020/011520/jeans/SPR20_FIT_GUIDE_DENIM_GUYS_STRAIGHT-min.jpg"
                   alt="product"
                 />
                 <p>Curvy New!</p>
               </div>
               <div>
                 <img
-                  src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dw1d7d9d9a/images/jeans-guide/031320-girls-shorts-guide/VINTAGE%20HIGH%20RISE.jpg"
+                  src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dw2af71b6e/images/homepage/2020/011520/jeans/SPR20_FIT_GUIDE_DENIM_GUYS_SKINNY-min.jpg"
                   alt="product"
                 />
                 <p>Vintage High Rise</p>
               </div>
               <div>
                 <img
-                  src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dwe4c9367c/images/jeans-guide/031320-girls-shorts-guide/MOM.jpg"
+                  src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dw44a6b06b/images/homepage/2020/011520/jeans/SPR20_FIT_GUIDE_DENIM_GUYS_SUPERSKINNY-min.jpg"
                   alt="product"
                 />
                 <p>Curvy New!</p>
               </div>
               <div>
                 <img
-                  src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dw263e01e0/images/jeans-guide/031320-girls-shorts-guide/BERMUDA.jpg"
+                  src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dwd8c47c3c/images/homepage/2020/011520/jeans/SPR20_FIT_GUIDE_DENIM_GIRLS_CURVYSKINNY-min.jpg"
                   alt="product"
                 />
                 <p>Curvy New!</p>
               </div>
               <div>
                 <img
-                  src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dw95172bda/images/jeans-guide/031320-girls-shorts-guide/SUPER%20HIGH%20RISE.jpg"
+                  src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dw47a1e310/images/homepage/2020/011520/jeans/SPR20_FIT_GUIDE_DENIM_GUYS_SLIMSTRAIGHT-min.jpg"
                   alt="product"
                 />
                 <p>Curvy New!</p>
