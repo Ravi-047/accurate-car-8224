@@ -168,11 +168,11 @@ button {
 }
 
 .__store__locator__ > div > a > div {
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .__store__locator__ > div > a > p {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
   color: black !important;
 }
@@ -192,7 +192,7 @@ button {
 }
 
 .__footer__bottom__ > a > p {
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 600;
 }
 
@@ -207,7 +207,7 @@ button {
   }
 }
 
-@media (max-width: 868px) {
+@media (max-width: 1024px) {
   .__social__ > div:first-child {
     font-size: 13px;
   }
@@ -219,7 +219,7 @@ button {
   }
 }
 
-@media (max-width: 668px) {
+@media (max-width: 1024px) {
   .__site__info__ > div > h3 > span {
     display: flex;
   }
@@ -252,5 +252,11 @@ button {
 
   .__store_anios div {
     height: fit-content;
+  }
+}
+
+@media (max-width: 1024px) {
+  .__footer__bottom__ {
+    flex-direction: column;
   }
 }
