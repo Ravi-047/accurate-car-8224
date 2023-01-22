@@ -7,13 +7,19 @@ import {
 
 const cartInitalState = {
   data: [],
+  price:0
 };
 export const cartReducer = (state = cartInitalState, { type, payload }) => {
   switch (type) {
     case GET_CART_ITEMS: {
+      let price=0;
+      for(let i=0;i<payload.data.length;i++){
+        console.log(payload.data[i].dprice)
+        price+=+payload.data[i].dprice;
+      }
       return {
         ...state,
-        data:payload
+        data:payload,price:price
       };
     }
     case ADD_ITEM_TO_CART: {

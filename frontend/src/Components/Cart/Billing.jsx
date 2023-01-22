@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Box,
   Button,
@@ -12,8 +12,20 @@ import {
   Text,
   VStack,
 } from "@chakra-ui/react";
+import Items from "./Items";
+import OrderSummary from "./OrderSummary";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import Loading from "../Loading";
 
-const Payment = () => {
+const Billing = () => {
+  const rdata = useSelector((store) => store.cartManager.data.data);
+  const price = useSelector((store) => store.cartManager.price);
+  const data = rdata || [];
+  if(data.length==0){
+    return <Loading />
+  }else{
+
   return (
     <Box p="10px">
       <Flex gap="20px" justify="space-between">
@@ -230,127 +242,18 @@ const Payment = () => {
                 p="27px"
                 _hover={{ bgColor: "#000" }}
               >
-                REVIEW ORDER
+                <Link to="/placeorder">REVIEW ORDER</Link>
               </Button>
             </Box>
           </Box>
         </Box>
         <Box bgColor="#f7f7f7" w="400px" p="20px" lineHeight="10">
-          <Heading
-            color="#1e3352"
-            textAlign="left"
-            size="lg"
-            fontSize="24px"
-            letterSpacing="1.5px"
-            mb="20px"
-          >
-            ORDER SUMMARY
-          </Heading>
-          <HStack justifyContent="space-between" fontSize="sm">
-            <Text color="#6d7278">Subtotal</Text>
-            <Text color="#6d7278">$52.23</Text>
-          </HStack>
-          <HStack justifyContent="space-between" fontSize="sm">
-            <Text color="#6d7278">Shipping Economy Ground</Text>
-            <Text color="#6d7278">$5.00</Text>
-          </HStack>
-          <HStack justifyContent="space-between" fontSize="sm">
-            <Text color="#6d7278">Sales Tax</Text>
-            <Text color="#6d7278">$4.13</Text>
-          </HStack>
-          <HStack
-            justifyContent="space-between"
-            fontWeight="semibold"
-            fontSize="sm"
-          >
-            <Text color="#6d7278">Estimated Total</Text>
-            <Text color="#6d7278">$61.36</Text>
-          </HStack>
-          <HStack mt="30px" alignItems="flex-start" textAlign="left" gap="15px">
-            <Image
-              w="150px"
-              src="https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw11145931/62342750_202_main.jpg?sw=478&sh=557&sm=fit&sfrm=jpg"
-            />
-            <Box lineHeight="25px">
-              <Heading size="xs" fontWeight="semibold" lineHeight="1.5">
-                {" "}
-                Long Sleeve Hooded Twill Button-Down Shirt
-              </Heading>
-              <HStack gap="20px" mt="25px">
-                <Text color="#6d7278" fontWeight="semibold" fontSize="sm">
-                  {" "}
-                  Color:
-                </Text>
-                <Text color="#6d7278" fontSize="sm">
-                  {" "}
-                  Copper Brown
-                </Text>
-              </HStack>
-              <HStack gap="30px">
-                <Text color="#6d7278" fontWeight="semibold" fontSize="sm">
-                  {" "}
-                  Size:
-                </Text>
-                <Text color="#6d7278" fontSize="sm">
-                  {" "}
-                  Small
-                </Text>
-              </HStack>
-              <HStack gap="23px">
-                <Text color="#6d7278" fontWeight="semibold" fontSize="sm">
-                  {" "}
-                  Qty: 1
-                </Text>
-                <Text color="#6d7278" fontSize="sm" fontWeight="semibold">
-                  {" "}
-                  $29.98
-                </Text>
-              </HStack>
-            </Box>
-          </HStack>
-          <Divider borderColor="#a3a3a3" m="20px 0px" />
-          <HStack mt="30px" alignItems="flex-start" textAlign="left" gap="15px">
-            <Image
-              w="150px"
-              src="https://www.aeropostale.com/dw/image/v2/BBSG_PRD/on/demandware.static/-/Sites-master-catalog-aeropostale/default/dw11145931/62342750_202_main.jpg?sw=478&sh=557&sm=fit&sfrm=jpg"
-            />
-            <Box lineHeight="25px">
-              <Heading size="xs" fontWeight="semibold" lineHeight="1.5">
-                {" "}
-                Long Sleeve Hooded Twill Button-Down Shirt
-              </Heading>
-              <HStack gap="20px" mt="25px">
-                <Text color="#6d7278" fontWeight="semibold" fontSize="sm">
-                  {" "}
-                  Color:
-                </Text>
-                <Text color="#6d7278" fontSize="sm">
-                  {" "}
-                  Copper Brown
-                </Text>
-              </HStack>
-              <HStack gap="30px">
-                <Text color="#6d7278" fontWeight="semibold" fontSize="sm">
-                  {" "}
-                  Size:
-                </Text>
-                <Text color="#6d7278" fontSize="sm">
-                  {" "}
-                  Small
-                </Text>
-              </HStack>
-              <HStack gap="23px">
-                <Text color="#6d7278" fontWeight="semibold" fontSize="sm">
-                  {" "}
-                  Qty: 1
-                </Text>
-                <Text color="#6d7278" fontSize="sm" fontWeight="semibold">
-                  {" "}
-                  $29.98
-                </Text>
-              </HStack>
-            </Box>
-          </HStack>
+          <OrderSummary />
+          <Box>
+            {data.map((item) => {
+              return <Items {...item} />;
+            })}
+          </Box>
           <Box border="1px solid black" mt="30px" p="20px" bgColor="white">
             <Heading size="sm" fontWeight="semibold" lineHeight="1.5">
               {" "}
@@ -390,6 +293,7 @@ const Payment = () => {
       </Flex>
     </Box>
   );
-}
+          }
+};
 
-export default Payment
+export default Billing;

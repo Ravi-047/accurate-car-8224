@@ -126,7 +126,7 @@ const Navbar = () => {
             </span>
             <span className="nav__cart__bag fixing__span">
               <HiOutlineShoppingBag className="nav__shopingbag" />
-              <span className="cart__quantity">1</span>
+             <span className="cart__quantity">1</span>
               <div className="__show__user__cart__">
                 <UserCart />
               </div>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Box,
   Button,
@@ -8,10 +8,37 @@ import {
   HStack,
   Image,
   Text,
+  useToast,
 } from "@chakra-ui/react";
-
+import OrderSummary from "./OrderSummary";
+import Orderitem from "./Orderitem";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import Loading from "../Loading";
 
 const Order = () => {
+  const rdata = useSelector((store) => store.cartManager.data.data);
+  console.log(rdata);
+  const data = rdata || [];
+  const price = useSelector((store) => store.cartManager.price);
+  const toast = useToast();
+  const navigate = useNavigate();
+
+  const orderpalced = () => {
+    toast({
+      title: "Thank you for placing order",
+      description: "Order placed Succesfully",
+      status: "success",
+      duration: 9000,
+      isClosable: true,
+    });
+    setTimeout(() => {
+      navigate("/");
+    }, 3000);
+  };
+if(data.length==0){
+  return <Loading />
+}else{
   return (
     <Box p="10px">
       <Flex gap="20px" justify="space-between">
@@ -134,7 +161,13 @@ const Order = () => {
             3. PLACE ORDER
           </Heading>
           <Divider borderColor="#a3a3a3" />
-          <Box m="50px">
+          <Box>
+            {data.map((item) => {
+              return <Orderitem {...item} />;
+            })}
+          </Box>
+
+          {/* <Box m="50px">
             <Flex mt="25px" textAlign="left" gap="40px">
               <Box>
                 <Heading size="sm" mb="30px" color="#1e3352">
@@ -189,11 +222,11 @@ const Order = () => {
                 </HStack>
               </Box>
             </Flex>
-          </Box>
+          </Box> */}
           <Box w="300px" ml="auto" lineHeight="30px" mr="10%">
             <HStack justifyContent="space-between" fontSize="sm">
               <Text color="#6d7278">Subtotal</Text>
-              <Text color="#6d7278">$52.23</Text>
+              <Text color="#6d7278">${price}</Text>
             </HStack>
             <HStack justifyContent="space-between" fontSize="sm">
               <Text color="#6d7278">Shipping Economy Ground</Text>
@@ -209,7 +242,7 @@ const Order = () => {
               fontSize="sm"
             >
               <Text color="#6d7278">Order Total</Text>
-              <Text color="#6d7278">$61.36</Text>
+              <Text color="#6d7278">${price + 5.0 + 4.13}</Text>
             </HStack>
             <Button
               mt="30px"
@@ -220,42 +253,14 @@ const Order = () => {
               w="300px"
               p="22px"
               _hover={{ bgColor: "#000" }}
+              onClick={orderpalced}
             >
               PLACE ORDER
             </Button>
           </Box>
         </Box>
         <Box bgColor="#f7f7f7" w="400px" p="20px" lineHeight="10">
-          <Heading
-            color="#1e3352"
-            textAlign="left"
-            size="lg"
-            fontSize="24px"
-            letterSpacing="1.5px"
-            mb="20px"
-          >
-            ORDER SUMMARY
-          </Heading>
-          <HStack justifyContent="space-between" fontSize="sm">
-            <Text color="#6d7278">Subtotal</Text>
-            <Text color="#6d7278">$52.23</Text>
-          </HStack>
-          <HStack justifyContent="space-between" fontSize="sm">
-            <Text color="#6d7278">Shipping Economy Ground</Text>
-            <Text color="#6d7278">$5.00</Text>
-          </HStack>
-          <HStack justifyContent="space-between" fontSize="sm">
-            <Text color="#6d7278">Sales Tax</Text>
-            <Text color="#6d7278">$4.13</Text>
-          </HStack>
-          <HStack
-            justifyContent="space-between"
-            fontWeight="semibold"
-            fontSize="sm"
-          >
-            <Text color="#6d7278">Estimated Total</Text>
-            <Text color="#6d7278">$61.36</Text>
-          </HStack>
+          <OrderSummary />
           <Box border="1px solid black" mt="30px" p="20px" bgColor="white">
             <Heading size="sm" fontWeight="semibold" lineHeight="1.5">
               {" "}
@@ -307,6 +312,7 @@ const Order = () => {
       </Flex>
     </Box>
   );
-}
+        }
+};
 
-export default Order
+export default Order;
