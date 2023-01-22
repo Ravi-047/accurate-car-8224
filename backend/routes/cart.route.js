@@ -32,11 +32,16 @@ cartRouter.patch("/modify/:id",async(req,res)=>{
 cartRouter.delete("/delete/:id",async(req,res)=>{
     let id=req.params.id
     let userData=await CartModel.find({_id:id})
-    if(userData[0].userID==req.body.userID){
-        await UserModel.findByIdAndDelete(id)
-        res.send("Deleted Succesfully.")
-    }else{
-        res.send("You can't delete this route.")
+    try {
+        
+        if(userData[0].userID==req.body.userID){
+            await CartModel.findByIdAndDelete(id)
+            res.send("Deleted Succesfully.")
+        }else{
+            res.send("You can't delete this route.")
+        }
+    } catch (error) {
+        res.send({error})
     }
 })
 
