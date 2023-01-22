@@ -93,4 +93,4 @@ https://harlequin-deer-kilt.cyclic.app/cart/delete/:id
 
  https://harlequin-deer-kilt.cyclic.app/product/get?gender=mens&category=bottom
 
- https://harlequin-deer-kilt.cyclic.app/product/get?category=tops&gender=mens
+https://harlequin-deer-kilt.cyclic.app/product/get?category=tops&gender=mens
