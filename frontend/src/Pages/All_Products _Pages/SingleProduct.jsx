@@ -63,13 +63,14 @@ const datas = [
 
 const SingleProduct = () => {
   const [data, setData] = useState([]);
+  const [cartData,setCartdata]=useState();
   const { id } = useParams();
   const dispatch = useDispatch();
   const cartdata = useSelector((store) => store.cartManager.data);
   console.log(cartdata);
   const handleAddtocart = () => {
     // console.log(data);
-    dispatch(addcartitems(data));
+    dispatch(addcartitems(cartData));
   };
 
   useEffect(() => {
@@ -79,13 +80,14 @@ const SingleProduct = () => {
         .then((response) => response.json())
         .then((json) => {
           // console.log(json[0]);
+          setCartdata(json[0]);
           setData(json);
         });
     }
     fetchData(id);
 
     dispatch(getcartitems());
-    dispatch(deletecartitems("63ccf8aac95113fd737ead8f"));
+    dispatch(deletecartitems("63cceb6459993966bc646fab"));
   }, [id]);
 
   return (
