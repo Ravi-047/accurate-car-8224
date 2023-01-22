@@ -30,7 +30,7 @@ const Navbar = () => {
 
   useEffect(() => {
     dispatch(getcartitems());
-  }, [dispatch, rdata]);
+  }, [dispatch]);
 
   return (
     <>

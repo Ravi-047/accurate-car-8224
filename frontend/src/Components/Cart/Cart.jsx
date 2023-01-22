@@ -33,7 +33,7 @@ const Cart = () => {
 
   useEffect(() => {
     dispatch(getcartitems());
-  }, [dispatch,rdata]);
+  }, []);
 
   if (data.length == 0) {
     return <Loading />;
