@@ -33,7 +33,7 @@ loginRouter.post("/adddetails",async(req,res)=>{
     }
 })
 
-loginRouter.patch("/loginUser",async (req,res)=>{
+loginRouter.post("/loginUser",async (req,res)=>{
     let data=req.body
     let ata=await LoginModel.find({email:data.email})
     if(ata.length!==0){
