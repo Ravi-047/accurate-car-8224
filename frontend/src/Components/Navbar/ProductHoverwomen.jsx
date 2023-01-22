@@ -8,7 +8,7 @@ const ProductHoverwomen = () => {
     <div className="__product__hover__section__">
       <div className="__product__hover__women__">
         <p className="__women__color__">
-          <Link>Shop All Women</Link>
+          <Link to="/women">Shop All Women</Link>
         </p>
         <p>
           <Link>New Arrivals</Link>

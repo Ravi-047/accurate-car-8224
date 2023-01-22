@@ -40,7 +40,7 @@ const Navbar = () => {
           </div>
           <div className="nav__top__data">
             Graphic Tees: Buy 1, Get 2 Free!
-            <Link to="/" style={{ color: "white", marginLeft: "10px" }}>
+            <Link to="/women" style={{ color: "white", marginLeft: "10px" }}>
               Women
             </Link>
             <Link to="/" style={{ color: "white", marginLeft: "10px" }}>
@@ -49,7 +49,7 @@ const Navbar = () => {
           </div>
           <div className="nav__top__data">
             50-70% Off Sitewide + Free Ship Over $50!
-            <Link to="/" style={{ color: "white", marginLeft: "10px" }}>
+            <Link to="/women" style={{ color: "white", marginLeft: "10px" }}>
               Women
             </Link>
             <Link to="/" style={{ color: "white", marginLeft: "10px" }}>
@@ -67,7 +67,7 @@ const Navbar = () => {
           </div>
           <div className="product__nav__all">
             <div className="__nav__product__hover__ onHoverWomen">
-              <Link>
+              <Link to="/women">
                 <ul className="__women__">Women</ul>
               </Link>
               <div className="__product__nav__hover__">
