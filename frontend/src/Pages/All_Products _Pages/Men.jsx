@@ -20,6 +20,8 @@ import { useNavigate } from "react-router-dom";
 import FilterModel from "./FilterModel";
 
 
+
+
 const categories=[{
   id:1,
   name:"Tops",
@@ -32,51 +34,49 @@ const categories=[{
 },
 {
   id:3,
-  name:"Dresses+Rompers",
-  path:"dresses"
-},
-{
-  id:4,
-  name:"Hodies+Swets",
+  name:"Hoodies+Sweters",
   path:"hoodies"
 },
 {
+  id:4,
+  name:"Outerwear",
+  path:"outerwear"
+},
+{
   id:5,
-  name:"Longewear",
-  path:"dresses"
+  name:"Activewear",
+  path:"tops"
 },
 {
   id:6,
-  name:"Swimwear",
-  path:"bottoms"
+  name:"Accesaries",
+  path:"hoodies"
 },
 {
   id:7,
-  name:"Outerwear",
-  path:"dresses"
+  name:"Underwear",
+  path:"bootom"
 },
 {
   id:8,
-  name:"Bralettes",
-  path:"tops"
+  name:"Collections",
+  path:"outerwear"
 },
 
 
 ] 
 
 
-
-
-const Women = () => {
+const Men = () => {
   const [data, setData] = useState([]);
-  const [filter, setfilter] = useState("tops");
+  const [filter, setfilter] = useState("hoodies");
 const navigate=useNavigate()
   //Get Method - is used to display data
   useEffect(() => {
 
     async function fetchData(filter) {
       // console.log(filter)
-     await fetch(`https://harlequin-deer-kilt.cyclic.app/product/get?gender=Womens&category=${filter}`)
+     await fetch(`https://harlequin-deer-kilt.cyclic.app/product/get?gender=mens&category=${filter}`)
       .then((response) => response.json())
       .then((json) => {
         console.log(json);
@@ -95,7 +95,7 @@ const navigate=useNavigate()
 
 
 const handleOnNextpage=(id)=>{
-  navigate(`/women/${id}`)
+  navigate(`/men/${id}`)
 }
 
   return (
@@ -105,7 +105,7 @@ const handleOnNextpage=(id)=>{
   
   <Box>
   <Flex justifyContent={"space-between"}>
-    <Text fontWeight={'bold'} fontSize='28px'>Women</Text>
+    <Text fontWeight={'bold'} fontSize='28px'>Men</Text>
 {
   categories.map((e,index)=>{
     return(
@@ -230,4 +230,4 @@ const handleOnNextpage=(id)=>{
   );
 };
 
-export default Women;
+export default Men;

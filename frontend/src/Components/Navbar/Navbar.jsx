@@ -67,7 +67,7 @@ const Navbar = () => {
           </div>
           <div className="product__nav__all">
             <div className="__nav__product__hover__ onHoverWomen">
-              <Link>
+              <Link to='/women'>
                 <ul className="__women__">Women</ul>
               </Link>
               <div className="__product__nav__hover__">
@@ -76,7 +76,7 @@ const Navbar = () => {
             </div>
 
             <div className="__nav__product__hover__ onHoverMen">
-              <Link>
+              <Link to='/men'>
                 <ul>Men</ul>
               </Link>
               <div className="__product__nav__hover__">
@@ -85,7 +85,7 @@ const Navbar = () => {
             </div>
 
             <div className="__nav__product__hover__ onHoverJeans">
-              <Link>
+              <Link to='/jeans'>
                 <ul>Jeans</ul>
               </Link>
               <div className="__nva__jeans__hover__">
@@ -94,7 +94,7 @@ const Navbar = () => {
             </div>
 
             <div className="__nav__product__hover__ onHoverClearance">
-              <Link>
+              <Link  to='/clearence'> 
                 <ul className="nav__clearance">Clearance</ul>
               </Link>
               <div className="__nva__jeans__hover__ clearance____">

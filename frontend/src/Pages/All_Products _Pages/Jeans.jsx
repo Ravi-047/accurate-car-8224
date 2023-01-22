@@ -20,106 +20,41 @@ import { useNavigate } from "react-router-dom";
 import FilterModel from "./FilterModel";
 
 
-const categories=[{
-  id:1,
-  name:"Tops",
-  path:"tops"
-},
-{
-  id:2,
-  name:"Bottoms",
-  path:"bottom"
-},
-{
-  id:3,
-  name:"Dresses+Rompers",
-  path:"dresses"
-},
-{
-  id:4,
-  name:"Hodies+Swets",
-  path:"hoodies"
-},
-{
-  id:5,
-  name:"Longewear",
-  path:"dresses"
-},
-{
-  id:6,
-  name:"Swimwear",
-  path:"bottoms"
-},
-{
-  id:7,
-  name:"Outerwear",
-  path:"dresses"
-},
-{
-  id:8,
-  name:"Bralettes",
-  path:"tops"
-},
-
-
-] 
 
 
 
 
-const Women = () => {
+
+const Jeans = () => {
   const [data, setData] = useState([]);
-  const [filter, setfilter] = useState("tops");
+  // const [filter, setfilter] = useState("tops");
 const navigate=useNavigate()
   //Get Method - is used to display data
   useEffect(() => {
 
-    async function fetchData(filter) {
+    async function fetchData() {
       // console.log(filter)
-     await fetch(`https://harlequin-deer-kilt.cyclic.app/product/get?gender=Womens&category=${filter}`)
+     await fetch(`https://harlequin-deer-kilt.cyclic.app/product/get`)
       .then((response) => response.json())
       .then((json) => {
         console.log(json);
         setData(json);
       });
     }
-    fetchData(filter);
+    fetchData();
 
     
-  }, [filter]);
-
-//geting category
-  const handleClick=(val)=>{
-    setfilter(val)
-    }
+  }, []);
 
 
 const handleOnNextpage=(id)=>{
-  navigate(`/women/${id}`)
+  navigate(`/clearence/${id}`)
 }
 
   return (
     <div>
       <Box w={"75%"} m="auto">
-               {/* //filter Part */}
-  
-  <Box>
-  <Flex justifyContent={"space-between"}>
-    <Text fontWeight={'bold'} fontSize='28px'>Women</Text>
-{
-  categories.map((e,index)=>{
-    return(
-      <Box key={index}>
-    <Text mt='3' fontSize={'16px'} fontWeight='bold' color={'gray.500'}  onClick={()=>handleClick(e.path)} >{e.name}</Text>
-      </Box>
-        
-       
-    )
-  })
-}
-</Flex>
-  </Box>
-  <hr/>
+              
         <Flex flexDirection={"row"} justifyContent="space-between">
           <FilterModel />
           <Box w="25%">
@@ -230,4 +165,4 @@ const handleOnNextpage=(id)=>{
   );
 };
 
-export default Women;
+export default Jeans;

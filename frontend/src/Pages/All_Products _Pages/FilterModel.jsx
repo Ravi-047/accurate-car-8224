@@ -57,9 +57,9 @@ const FilterModel = () => {
     <AccordionPanel pb={4}>
     <Grid templateColumns='repeat(6, 1fr)' gap={4} mt={0} w={'90%'} m='auto'>
         {
-            Size.map((e)=>{
+            Size.map((e,i)=>{
                 return (
-                      <Box border={'1px solid black'} borderRadius='100px' cursor={'pointer'} _hover={{bgColor:"teal"}}>
+                      <Box border={'1px solid black'} borderRadius='100px' cursor={'pointer'} _hover={{bgColor:"teal"}} key={i}>
                 <Text align={'center'} fontWeight='bold' >{e}</Text>
             </Box>
                 )
@@ -85,9 +85,9 @@ const FilterModel = () => {
 
  <Grid templateColumns='repeat(6, 1fr)' gap={4} mt={0} w={'90%'} m='auto'>
         {
-            Colors.map((e)=>{
+            Colors.map((e,i)=>{
                 return (
-                      <Box border={'1px solid black'} borderRadius='100px' cursor={'pointer'} fontWeight='bold' backgroundColor={e} h={8}>
+                      <Box border={'1px solid black'} borderRadius='100px' cursor={'pointer'} fontWeight='bold' backgroundColor={e} h={8} key={i}>
             </Box>
                 )
             })
