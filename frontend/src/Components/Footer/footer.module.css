@@ -87,8 +87,7 @@
   align-items: center;
 }
 
-.__social__icons__ + div,
-button {
+.__social__icons__ + div {
   display: flex;
   justify-content: right;
   align-items: center;
