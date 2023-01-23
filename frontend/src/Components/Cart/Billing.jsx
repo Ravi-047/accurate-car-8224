@@ -19,9 +19,7 @@ import { Link } from "react-router-dom";
 import Loading from "../Loading";
 
 const Billing = () => {
-  const rdata = useSelector((store) => store.cartManager.data.data);
-  const price = useSelector((store) => store.cartManager.price);
-  const data = rdata || [];
+  const data = useSelector((store) => store.cartManager.data);
   if(data.length==0){
     return <Loading />
   }else{
