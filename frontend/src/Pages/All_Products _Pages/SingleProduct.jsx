@@ -70,9 +70,10 @@ const SingleProduct = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const cartdata = useSelector((store) => store.cartManager.data);
-  console.log(cartdata);
+  // console.log(cartdata);
   const toast=useToast();
   const handleAddtocart = () => {
+    console.log(cartData);
     dispatch(addcartitems(cartData));
           toast({
             title: "Item added to bag",
@@ -89,7 +90,7 @@ const SingleProduct = () => {
         .then((response) => response.json())
         .then((json) => {
           setCartdata(json[0]);
-          console.log(json);
+          // console.log(json);
           setData(json);
         });
     }
@@ -379,7 +380,7 @@ const SingleProduct = () => {
                     w="100%"
                     m="auto"
                     align={"center"}
-                    key={item.id}
+                    key={index}
                     bgColor="gray.100"
                     mt={12}
                   >
