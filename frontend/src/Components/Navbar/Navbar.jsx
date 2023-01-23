@@ -133,9 +133,9 @@ const Navbar = () => {
               </div>
             </span>
             <span className="nav__cart__bag fixing__span">
-            <Link to="/cart">
-              <HiOutlineShoppingBag className="nav__shopingbag" />
-            </Link>
+              <Link to="/cart">
+                <HiOutlineShoppingBag className="nav__shopingbag" />
+              </Link>
               <span className="cart__quantity">
                 {localStorage.getItem("token") !== null ? data.length : 0}
               </span>

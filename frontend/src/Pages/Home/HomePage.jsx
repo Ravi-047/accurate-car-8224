@@ -178,39 +178,49 @@ const HomePage = () => {
               showDots={true}
             >
               <div>
-                <img
-                  src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dwd31e0e5c/images/jeans-guide/031320-girls-shorts-guide/CURVY.jpg"
-                  alt="product"
-                />
+                <Link to="/women">
+                  <img
+                    src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dwd31e0e5c/images/jeans-guide/031320-girls-shorts-guide/CURVY.jpg"
+                    alt="product"
+                  />
+                </Link>
                 <p>Curvy New!</p>
               </div>
               <div>
-                <img
-                  src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dw1d7d9d9a/images/jeans-guide/031320-girls-shorts-guide/VINTAGE%20HIGH%20RISE.jpg"
-                  alt="product"
-                />
+                <Link to="/women">
+                  <img
+                    src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dw1d7d9d9a/images/jeans-guide/031320-girls-shorts-guide/VINTAGE%20HIGH%20RISE.jpg"
+                    alt="product"
+                  />
+                </Link>
                 <p>Vintage High Rise</p>
               </div>
               <div>
-                <img
-                  src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dwe4c9367c/images/jeans-guide/031320-girls-shorts-guide/MOM.jpg"
-                  alt="product"
-                />
-                <p>Curvy New!</p>
+                <Link to="/women">
+                  <img
+                    src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dwe4c9367c/images/jeans-guide/031320-girls-shorts-guide/MOM.jpg"
+                    alt="product"
+                  />
+                </Link>
+                <p>Mom New!</p>
               </div>
               <div>
-                <img
-                  src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dw263e01e0/images/jeans-guide/031320-girls-shorts-guide/BERMUDA.jpg"
-                  alt="product"
-                />
-                <p>Curvy New!</p>
+                <Link to="/women">
+                  <img
+                    src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dw263e01e0/images/jeans-guide/031320-girls-shorts-guide/BERMUDA.jpg"
+                    alt="product"
+                  />
+                </Link>
+                <p>Bermuda</p>
               </div>
               <div>
-                <img
-                  src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dw95172bda/images/jeans-guide/031320-girls-shorts-guide/SUPER%20HIGH%20RISE.jpg"
-                  alt="product"
-                />
-                <p>Curvy New!</p>
+                <Link to="/women">
+                  <img
+                    src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dw95172bda/images/jeans-guide/031320-girls-shorts-guide/SUPER%20HIGH%20RISE.jpg"
+                    alt="product"
+                  />
+                </Link>
+                <p>Midi</p>
               </div>
             </Carousel>
           </div>
@@ -245,39 +255,49 @@ const HomePage = () => {
               showDots={true}
             >
               <div>
-                <img
-                  src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dwc908e3b8/images/shorts-guide/2020/guys-shorts-guide/LONG%20CARGO.jpg"
-                  alt="product"
-                />
-                <p>Curvy New!</p>
+                <Link to="/men">
+                  <img
+                    src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dwc908e3b8/images/shorts-guide/2020/guys-shorts-guide/LONG%20CARGO.jpg"
+                    alt="product"
+                  />
+                </Link>
+                <p>Long Cargo</p>
               </div>
               <div>
-                <img
-                  src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dw54f0dee5/images/shorts-guide/2020/guys-shorts-guide/SLIM%20CUT-OFF.jpg"
-                  alt="product"
-                />
-                <p>Vintage High Rise</p>
+                <Link to="/men">
+                  <img
+                    src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dw54f0dee5/images/shorts-guide/2020/guys-shorts-guide/SLIM%20CUT-OFF.jpg"
+                    alt="product"
+                  />
+                </Link>
+                <p>Slimk Cut-Off</p>
               </div>
               <div>
-                <img
-                  src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dw8287ef13/images/shorts-guide/2020/guys-shorts-guide/BEACH%20CHINO.jpg"
-                  alt="product"
-                />
-                <p>Curvy New!</p>
+                <Link to="/men">
+                  <img
+                    src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dw8287ef13/images/shorts-guide/2020/guys-shorts-guide/BEACH%20CHINO.jpg"
+                    alt="product"
+                  />
+                </Link>
+                <p>Beach Chino</p>
               </div>
               <div>
-                <img
-                  src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dw9619c8f9/images/shorts-guide/2020/guys-shorts-guide/SLIM%20CUFFED.jpg"
-                  alt="product"
-                />
-                <p>Curvy New!</p>
+                <Link to="/men">
+                  <img
+                    src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dw9619c8f9/images/shorts-guide/2020/guys-shorts-guide/SLIM%20CUFFED.jpg"
+                    alt="product"
+                  />
+                </Link>
+                <p>Clasic Chino</p>
               </div>
               <div>
-                <img
-                  src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dw323348c8/images/shorts-guide/2020/guys-shorts-guide/CLASSIC%20CHINO.jpg"
-                  alt="product"
-                />
-                <p>Curvy New!</p>
+                <Link to="/men">
+                  <img
+                    src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dw323348c8/images/shorts-guide/2020/guys-shorts-guide/CLASSIC%20CHINO.jpg"
+                    alt="product"
+                  />
+                </Link>
+                <p>Slim Cuffed</p>
               </div>
             </Carousel>
           </div>
@@ -356,10 +376,12 @@ const HomePage = () => {
               showDots={true}
             >
               <div>
-                <img
-                  src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dw40b59aa7/images/homepage/2020/011520/jeans/SPR20_FIT_GUIDE_DENIM_GIRLS_CHEEKY-min.jpg"
-                  alt="product"
-                />
+                <Link to="/women">
+                  <img
+                    src="https://www.aeropostale.com/on/demandware.static/-/Sites-aeropostale-Library/default/dw40b59aa7/images/homepage/2020/011520/jeans/SPR20_FIT_GUIDE_DENIM_GIRLS_CHEEKY-min.jpg"
+                    alt="product"
+                  />
+                </Link>
                 <p>Curvy New!</p>
               </div>
               <div>
