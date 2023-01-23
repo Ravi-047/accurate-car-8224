@@ -17,9 +17,7 @@ import { useNavigate } from "react-router-dom";
 import Loading from "../Loading";
 
 const Order = () => {
-  const rdata = useSelector((store) => store.cartManager.data.data);
-  console.log(rdata);
-  const data = rdata || [];
+  const data = useSelector((store) => store.cartManager.data);
   const price = useSelector((store) => store.cartManager.price);
   const toast = useToast();
   const navigate = useNavigate();

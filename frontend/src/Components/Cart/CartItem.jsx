@@ -14,18 +14,17 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
-import { useDispatch } from "react-redux";
-import { deletecartitems, getcartitems } from "../../Redux/cart/cart.actions";
+import { useDispatch, useSelector } from "react-redux";
+import { deletecartitems, getcartitems, quantiy } from "../../Redux/cart/cart.actions";
 
-const CartItem = ({ image1, title, dprice, oprice, _id }) => {
-  const dispatch = useDispatch();
+const CartItem = ({ image1, title, dprice, oprice, _id, handleRemove }) => {
+  const qty=useSelector((store)=>store.cartManager.qty);
+  console.log(qty);
+  const dispatch=useDispatch();
 
-    const handleRemove = (id) => {
-      dispatch(deletecartitems(id));
-      dispatch(getcartitems());
-    };
-
-    
+    const handleQuantity=(e,id,dprice)=>{
+      dispatch(quantiy(e.target.value,id,+dprice));
+    }
   return (
     <Box maxW={["300px", "900px"]} m={["20px", "0px"]}>
       <Flex mt="25px" textAlign="left" gap="40px" wrap="wrap" maxW="900px">
@@ -62,7 +61,7 @@ const CartItem = ({ image1, title, dprice, oprice, _id }) => {
               <Heading size="sm" mb="30px" color="#1e3352">
                 QUANTIY
               </Heading>
-              <Select placeholder="1">
+              <Select placeholder="1" onClick={(e)=>handleQuantity(e,_id,dprice)}>
                 <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>

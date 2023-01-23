@@ -5,8 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getcartitems } from "../../Redux/cart/cart.actions";
 
 const UserCart = () => {
-  const rdata = useSelector((store) => store.cartManager.data.data);
-  const cartdata = rdata || [];
+  const data = useSelector((store) => store.cartManager.data);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getcartitems());
@@ -25,7 +24,7 @@ const UserCart = () => {
             <Link to="/cart">View Shoping Bag</Link>
           </div>
           <div className="__cart__all__product__">
-            {cartdata?.map((item, index) => (
+            {data?.map((item, index) => (
               <div className="__cart__each__product__" key={index}>
                 <div>
                   <img src={item.image1} alt="productImage" />

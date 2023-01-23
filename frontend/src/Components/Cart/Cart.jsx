@@ -15,7 +15,7 @@ import {
 } from "@chakra-ui/react";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { getcartitems } from "../../Redux/cart/cart.actions";
+import { deletecartitems, getcartitems } from "../../Redux/cart/cart.actions";
 import { GiConsoleController } from "react-icons/gi";
 import CartItem from "./CartItem";
 import { useState } from "react";
@@ -24,16 +24,18 @@ import OrderSummary from "./OrderSummary";
 import Loading from "../Loading";
 
 const Cart = () => {
-  const rdata = useSelector((store) => store.cartManager.data.data);
+  const data = useSelector((store) => store.cartManager.data);
   const price = useSelector((store) => store.cartManager.price);
-  console.log(price);
   const dispatch = useDispatch();
-  console.log(rdata);
-  const data = rdata || [];
+  console.log(data);
+
+  const handleRemove = (id) => {
+    dispatch(deletecartitems(id));
+  };
 
   useEffect(() => {
     dispatch(getcartitems());
-  }, [dispatch,rdata]);
+  }, []);
 
   if (data.length == 0) {
     return <Loading />;
@@ -59,7 +61,7 @@ const Cart = () => {
         >
           <Box>
             {data.map((item) => {
-              return <CartItem {...item} />;
+              return <CartItem {...item} handleRemove={handleRemove}/>;
             })}
           </Box>
           <Box bgColor="#f7f7f7" w="360px" p="20px" lineHeight="10">
