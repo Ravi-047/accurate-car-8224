@@ -30,7 +30,7 @@ const Navbar = () => {
 
   useEffect(() => {
     dispatch(getcartitems());
-  }, [dispatch, rdata]);
+  }, []);
 
   return (
     <>
@@ -134,9 +134,9 @@ const Navbar = () => {
               </div>
             </span>
             <span className="nav__cart__bag fixing__span">
-            <Link to="/cart">
-              <HiOutlineShoppingBag className="nav__shopingbag" />
-            </Link>
+              <Link to="/cart">
+                <HiOutlineShoppingBag className="nav__shopingbag" />
+              </Link>
               <span className="cart__quantity">
                 {localStorage.getItem("token") !== null ? cartdata.length : 0}
               </span>
