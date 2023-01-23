@@ -24,8 +24,7 @@ import { useEffect } from "react";
 import { getcartitems } from "../../Redux/cart/cart.actions";
 
 const Navbar = () => {
-  const rdata = useSelector((store) => store.cartManager.data.data);
-  const cartdata = rdata || [];
+  const data = useSelector((store) => store.cartManager.data);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -138,7 +137,7 @@ const Navbar = () => {
               <HiOutlineShoppingBag className="nav__shopingbag" />
             </Link>
               <span className="cart__quantity">
-                {localStorage.getItem("token") !== null ? cartdata.length : 0}
+                {localStorage.getItem("token") !== null ? data.length : 0}
               </span>
               <div className="__show__user__cart__">
                 <UserCart />
