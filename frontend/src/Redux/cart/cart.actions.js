@@ -22,7 +22,7 @@ export const getcartitems = () => async (dispatch) => {
 };
 
 export const addcartitems = (data) => async (dispatch) => {
-  // console.log(data);
+  console.log(data);
   try {
     let response = await axios.post(
       "https://harlequin-deer-kilt.cyclic.app/cart/create ",
